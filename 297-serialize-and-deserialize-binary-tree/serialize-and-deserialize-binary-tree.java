@@ -8,18 +8,18 @@
  * }
  */
 public class Codec {
-    StringBuilder sb=new StringBuilder();
-    void dfs(TreeNode root){
+    void dfs(TreeNode root, StringBuilder sb){
         if(root==null){
             sb.append("N,");
             return;}
             sb.append(root.val).append(",");
-            dfs(root.left);
-            dfs(root.right);
+            dfs(root.left,sb);
+            dfs(root.right,sb);
         }
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        dfs(root);
+       StringBuilder sb=new StringBuilder();
+        dfs(root,sb);
         return sb.toString();
     }
     TreeNode build(Queue<String> q){
