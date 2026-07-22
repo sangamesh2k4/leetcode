@@ -22,8 +22,7 @@ class Solution {
         for(int i=0;i<grid.length;i++){
             for(int j=0;j<grid[0].length;j++){
                 if(grid[i][j]==0){
-                    boolean res=dfs(i,j,grid);
-                    if(res==true){
+                    if(dfs(i,j,grid)){
                         islands++;
                     }
                 }
