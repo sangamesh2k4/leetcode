@@ -1,7 +1,8 @@
 class Solution {
+    int m,n;
     void dfs(int row,int col,char[][] grid){
-       int m=grid.length;
-        int n=grid[0].length;
+       m=grid.length;
+       n=grid[0].length;
         if(row<0 || row>=m|| col<0||col>=n||grid[row][col]=='0'){
             return;
         }
