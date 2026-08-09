@@ -10,9 +10,7 @@ class Solution {
         }
         double finalprice=0;
         while(!price.isEmpty() && !discount.isEmpty()){
-            double p=(double)price.poll();
-            double d=(double)discount.poll();
-            finalprice+=(p*(100-d))/100;
+            finalprice+=(double)price.poll()*(100-(double)discount.poll())/100;
         }
         while(!price.isEmpty()){
             finalprice+=(double)price.poll();
