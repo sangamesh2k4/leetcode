@@ -35,11 +35,6 @@ class Solution {
         if(equation.charAt(1)=='='){
             union(u,v);
         }
-        if(equation.charAt(1)=='!'){
-            if(find(u)==find(v)){
-                return false;
-            }
-        }
        }
         for(String equation : equations){
         int u=equation.charAt(0)-'a';
