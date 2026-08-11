@@ -13,11 +13,9 @@ class Solution {
         for(int num:nums){
             set.add(num);
         }
-        while(true){
-            if(!set.contains(sum)){
-                return sum;
-            }
+        while(set.contains(sum)){
             sum++;
         }
+        return sum;
     }
 }
