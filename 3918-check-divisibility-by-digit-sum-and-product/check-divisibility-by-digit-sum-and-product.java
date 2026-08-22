@@ -8,7 +8,6 @@ class Solution {
             sum+=digit;
             n/=10;
         }
-        if(org%(sum+product)==0) return true;
-        return false;
+        return org%(sum+product)==0;
     }
 }
