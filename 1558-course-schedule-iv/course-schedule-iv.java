@@ -6,6 +6,7 @@ class Solution {
         }
         for(int k=0;k<numCourses;k++){
             for(int i=0;i<numCourses;i++){
+                if(!dp[i][k]) continue;
                 for(int j=0;j<numCourses;j++){
                     dp[i][j]=dp[i][j]|| (dp[i][k]&& dp[k][j]);
                 }
