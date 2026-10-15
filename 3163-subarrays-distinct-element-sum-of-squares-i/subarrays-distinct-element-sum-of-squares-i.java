@@ -6,9 +6,10 @@ class Solution {
             int count=0;
             boolean[] visited=new boolean[101];
             for(int j=i;j<n;j++){
-                if(!visited[nums.get(j)]){
+                int num=nums.get(j);
+                if(!visited[num]){
                     count++;
-                    visited[nums.get(j)]=true;
+                    visited[num]=true;
                 }
                 ans+=count*count;
             }
