@@ -3,11 +3,14 @@ class Solution {
         int n=nums.size();
         int ans=0;
         for(int i=0;i<n;i++){
-            Set<Integer> s=new HashSet<>();
+            int count=0;
+            boolean[] visited=new boolean[101];
             for(int j=i;j<n;j++){
-                s.add(nums.get(j));
-                int d=s.size();
-                ans+=d*d;
+                if(!visited[nums.get(j)]){
+                    count++;
+                    visited[nums.get(j)]=true;
+                }
+                ans+=count*count;
             }
         }
         return ans;
