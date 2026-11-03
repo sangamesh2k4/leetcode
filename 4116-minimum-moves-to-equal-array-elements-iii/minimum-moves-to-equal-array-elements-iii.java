@@ -5,6 +5,6 @@ class Solution {
             if(num>max) max=num;
             sum+=num;
         }
-        return (nums.length*max)-sum;
+        return nums.length*max-sum;
     }
 }
