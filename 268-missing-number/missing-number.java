@@ -1,7 +1,7 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        int miss=(nums.length*(nums.length+1))/2;
-        for(int num : nums) miss-=num;
+        int n=nums.length, miss=(nums.length*(nums.length+1))/2;
+        for(int i=0;i<n;i++) miss-=nums[i];
         return miss;
     }
 }
